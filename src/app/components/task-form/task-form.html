@@ -1,0 +1,25 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Título</label>
+    <input type="text" formControlName="title" placeholder="Ej. Comprar manzanas" />
+
+    @if (taskForm.get('title')?.invalid && taskForm.get('title')?.touched) {
+      <p style="color: red">Ingresa un título</p>
+    }
+  </div>
+
+  <div>
+    <label>Prioridad</label>
+    <select formControlName="priority">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+  </div>
+
+  <div>
+    <label> <input type="checkbox" formControlName="completed" /> Completado </label>
+  </div>
+
+  <button type="submit" [disabled]="taskForm.invalid">Agregar tarea</button>
+</form>

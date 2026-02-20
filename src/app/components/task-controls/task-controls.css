@@ -1,0 +1,28 @@
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+button {
+  background: white;
+  border: 2px solid royalblue;
+  color: royalblue;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: royalblue;
+  color: white;
+}
+
+button.active {
+  background: royalblue;
+  color: white;
+  box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.3);
+}

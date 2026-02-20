@@ -1,0 +1,5 @@
+<div class="card" [ngClass]="task().priority.toLowerCase()">
+  <span [class.completed]="task().completed">
+    {{ task().title }}
+  </span>
+</div>

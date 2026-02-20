@@ -1,0 +1,7 @@
+<app-task-controls (filterChanged)="handleFilterChange($event)" />
+
+<div class="list">
+  @for (task of filteredTasks(); track task.title) {
+    <app-task-card [task]="task" />
+  }
+</div>

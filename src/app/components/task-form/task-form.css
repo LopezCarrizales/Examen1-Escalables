@@ -1,0 +1,39 @@
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: silver;
+  cursor: not-allowed;
+}

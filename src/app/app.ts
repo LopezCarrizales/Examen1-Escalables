@@ -1,12 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { TaskService } from './services/task-service';
+import { TaskForm } from './components/task-form/task-form';
+import { Content } from './components/content/content';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [TaskForm, Content],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('examen-parcial-1');
+  taskService = inject(TaskService);
+
+  handleTaskAdded(newTask: any) {
+    this.taskService.addTask(newTask);
+  }
 }

@@ -1,0 +1,5 @@
+<div class="controls">
+  <button (click)="setFilter('all')" [class.active]="activeFilter() === 'all'">Show all</button>
+  <button (click)="setFilter('completed')" [class.active]="activeFilter() === 'completed'">Show Completed</button>
+  <button (click)="setFilter('pending')" [class.active]="activeFilter() === 'pending'">Show Pending</button>
+</div>

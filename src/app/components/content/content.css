@@ -1,8 +1,8 @@
-.task-list {
-  margin-top: 20px;
+.list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
   max-width: 400px;
+  margin-top: 10px;
 }
